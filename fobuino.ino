@@ -1,21 +1,27 @@
-int voltage = 153; //153 is 66% of 255. This should equal ~3V
-int buttonPin = 5; //this is the pin that the button on the remote is attached to
+int power = 13;
+int button = 12;
 int presses = 2;
 
 void pressButton() {
-  if (presses > 0) {
-    analogWrite(buttonPin, voltage);
-    presses--;
-  }
+  digitalWrite(button, HIGH);
+  delay(250);
+  digitalWrite(button, LOW);
+  delay(250);
 }
 
 void setup() {
   // put your setup code here, to run once:
-  pinMode(buttonPin, OUTPUT);
+  pinMode(power, OUTPUT);
+  pinMode(button, OUTPUT);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  delay(500);
-  pressButton();
+  if (presses > 0) {
+    digitalWrite(power, HIGH);
+    pressButton();
+    presses--;
+  } else {
+    digitalWrite(power, LOW);
+  }
 }
