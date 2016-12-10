@@ -1,7 +1,7 @@
 int button = 5; //we are controlling the button via pin 5 on the Arduino UNO board
 int presses = 2; //simple control variable to keep track of how many times we "press" the button
 int wait = 750; //wait this many milliseconds. reset to 250 when done testing with DMM.
-int timer = 900000; //900000ms = 15 minutes
+int timer = 300000; //900000ms = 15 minutes
 
 void pressButton() {
   digitalWrite(button, HIGH); //ratchet the voltage to 5V
