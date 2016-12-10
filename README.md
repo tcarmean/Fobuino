@@ -9,3 +9,7 @@ My wife and I are getting into the whole *vanlife* thing. Over the past 3 months
 ## How did you hack the hardware?
 I disassembled one of the remote start keyfobs that came with the van. The Owner's Manual that Ford shipped with the keyfob says I have the 1-Way Transmitter. The transmitter operates on the principle that pressing the button closes a simple circuit. We wired the 3.3V power rail from the Arduino into one side of the circuit and used a resistor/transistor combo to simulate pressing the button. The transistor is activated by using the `digitalWrite` function that ships with the Arduino. It's really quite simple.
 
+## Can I follow your adventures?
+[Instagram](https://www.instagram.com/van_going/)
+[Ford Transit Connect Forum (userid: chong)](http://fordtransitconnectforum.com)
+
