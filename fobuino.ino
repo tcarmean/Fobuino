@@ -16,8 +16,7 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  if (presses > 0) {
+  for (int i=presses; i>0; i--) {
     pressButton();
-    presses--;
   }
 }
