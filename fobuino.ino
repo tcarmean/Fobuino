@@ -1,28 +1,24 @@
-int power = 13;
-int button = 12;
+int button = 5;
 int presses = 2;
+int volts = 153; //a value between 0 and 255 where 0 is 0 volts and 255 is 5 volts
 int wait = 5000; //wait this many milliseconds. reset to 250 when done testing with DMM.
 
 void pressButton() {
-  digitalWrite(button, HIGH);
+  analogWrite(button, HIGH);
   delay(wait);
-  digitalWrite(button, LOW);
+  analogWrite(button, LOW);
   delay(wait);
 }
 
 void setup() {
   // put your setup code here, to run once:
-  pinMode(power, OUTPUT);
   pinMode(button, OUTPUT);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
   if (presses > 0) {
-    digitalWrite(power, HIGH);
     pressButton();
     presses--;
-  } else {
-    digitalWrite(power, LOW);
   }
 }
