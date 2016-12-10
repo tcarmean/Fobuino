@@ -20,7 +20,6 @@ void startCar(void *context) {
 void setup() {
   // put your setup code here, to run once:
   pinMode(button, OUTPUT);
-  digitalWrite(button, LOW);
   t.every(period * 60, startCar, (void *)0);
 }
 
